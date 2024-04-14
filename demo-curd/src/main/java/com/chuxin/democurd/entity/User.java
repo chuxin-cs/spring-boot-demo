@@ -15,7 +15,7 @@ public class User {
     /**
      * 用户名
      */
-    private String name;
+    private String userName;
     /**
      * password
      */
