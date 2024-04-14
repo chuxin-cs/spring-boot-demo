@@ -18,6 +18,7 @@ public interface UserMapper {
     @Delete("delete from sys_user where id=#{id}")
     Integer deleteUser(Integer id);
 
+    // 更新
     @Update("update sys_user set userName=#{userName},password=#{password} where id=#{id}")
     Integer editUser(User user);
 }
