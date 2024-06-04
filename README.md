@@ -6,17 +6,11 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/xkcoding/spring-boot-demo/stargazers"><img alt="star" src="https://img.shields.io/github/stars/xkcoding/spring-boot-demo.svg?label=Stars&style=social"/></a>
-  <a href="https://github.com/xkcoding/spring-boot-demo/network/members"><img alt="star" src="https://img.shields.io/github/forks/xkcoding/spring-boot-demo.svg?label=Fork&style=social"/></a>
-  <a href="https://github.com/xkcoding/spring-boot-demo/watchers"><img alt="star" src="https://img.shields.io/github/watchers/xkcoding/spring-boot-demo.svg?label=Watch&style=social"/></a>
-</p>
-
-<p align="center">
   <span>English | <a href="./README.md">中文</a></span>
 </p>
 
-### Introduction of each Module
+### demo 清单
 
-| Module Name                                                  | Module Description                                           |
+| 项目名称                                                      | 项目描述                                                      |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | [demo-helloworld](./demo-helloworld)                         | a helloworld demo.                                           |
