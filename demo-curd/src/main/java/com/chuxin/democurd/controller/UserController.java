@@ -7,8 +7,6 @@ import com.chuxin.democurd.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-
 @RestController
 @RequestMapping("/user")
 public class UserController {
@@ -18,9 +16,10 @@ public class UserController {
 
     // 查
     @GetMapping("/page")
-    public ApiResult<User> page(@RequestParam int page, @RequestParam int pageSize) {
-        return ApiResultHandler.success( userService.page());
+    public ApiResult page(@RequestParam int page, @RequestParam int pageSize) {
+        return ApiResultHandler.success(userService.page());
     }
+
     // 增
     @PostMapping("/add")
     public Boolean add(@RequestBody User user) {
@@ -28,9 +27,10 @@ public class UserController {
     }
 
     // 删
-    @GetMapping("delete")
-    public String delete() {
-        return "delete" + userService.delete();
+    @PostMapping("/delete")
+    public Boolean delete(@RequestBody User user) {
+        userService.delete(user);
+        return true;
     }
 
     // 改

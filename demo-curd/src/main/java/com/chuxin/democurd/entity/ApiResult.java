@@ -1,5 +1,8 @@
 package com.chuxin.democurd.entity;
 
+import lombok.Data;
+
+@Data
 public class ApiResult<T> {
     /**
      * 错误码，表示一种错误类型
@@ -19,24 +22,6 @@ public class ApiResult<T> {
     public ApiResult(int code, String msg, T data) {
         this.code = code;
         this.msg = msg;
-        this.data = data;
-    }
-    public int getCode() {
-        return code;
-    }
-    public void setCode(int code) {
-        this.code = code;
-    }
-    public String getMsg() {
-        return msg;
-    }
-    public void setMsg(String msg) {
-        this.msg = msg;
-    }
-    public T getData() {
-        return data;
-    }
-    public void setData(T data) {
         this.data = data;
     }
 }

@@ -7,7 +7,7 @@ import java.util.List;
 public interface UserService {
     List<User> page();
 
-    Boolean delete();
+    Boolean delete(User user);
 
     Boolean edit();
 
