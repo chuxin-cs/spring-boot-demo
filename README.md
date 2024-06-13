@@ -9,9 +9,7 @@
   <span>English | <a href="./README.md">中文</a></span>
 </p>
 
-### demo 清单
-- [demo-helloworld](./demo-helloworld) 打印hello world
-
-| 项目名称                                                      | 项目描述                                                      |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [demo-helloworld](./demo-helloworld)                         | a helloworld demo.                                           |
+### 功能清单
+| 项目名称                                               | 项目描述                                           |
+| ----------------------------------------------------- | ---------------------------------------------------------- |
+| [demo-hello-world](./demo-hello-world)                | 打印 hello world                                           |
