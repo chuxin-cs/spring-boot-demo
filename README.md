@@ -1,4 +1,6 @@
-<h1 align="center"><a href="https://github.com/chuxin-cs" target="_blank">Spring Boot Demo</a></h1>
+<h1 align="center">
+  <a href="https://github.com/chuxin-cs" target="_blank">Spring Boot Demo</a>
+</h1>
 
 <p align="center">
   <a href="https://www.oracle.com/technetwork/java/javase/downloads/index.html">
@@ -11,10 +13,10 @@
 </p>
 
 <p align="center">
-  <span>English | <a href="./README.md">中文</a></span>
+  <span>English | <a href="./README.zh-CN.md">中文</a></span>
 </p>
 
 ### 功能清单
-| 功能名称  |  文档链接  | 功能描述 |
+| name  |  document  | 功能描述 |
 | -------- | --------- |--------- |
 | [demo-hello-world](./demo-hello-world)  |  [yuque](https://www.yuque.com/chuxin-cs/demo/ukkwkpkf817hn3ac)    | Create a project based on Spring Boot, just print "hello world" |
