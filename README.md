@@ -17,6 +17,6 @@
 </p>
 
 ### 功能清单
-| name  |  document  | 功能描述 |
+| name  |  document  | description |
 | -------- | --------- |--------- |
 | [demo-hello-world](./demo-hello-world)  |  [yuque](https://www.yuque.com/chuxin-cs/demo/ukkwkpkf817hn3ac)    | Create a project based on Spring Boot, just print "hello world" |
