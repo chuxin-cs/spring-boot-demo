@@ -4,10 +4,6 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
-### Spring Boot ###
-target/
-!.mvn/wrapper/maven-wrapper.jar
-
 ### STS ###
 .apt_generated
 .classpath
@@ -22,25 +18,16 @@ target/
 *.iws
 *.iml
 *.ipr
-out/
-gen/
 
 ### NetBeans ###
 /nbproject/private/
-/build/
 /nbbuild/
 /dist/
 /nbdist/
 /.nb-gradle/
+build/
 !**/src/main/**/build/
 !**/src/test/**/build/
 
-### LOGS ###
-logs/
-*.log
-
-### Mac OS ###
-.DS_Store
-
-### VS CODE ###
+### VS Code ###
 .vscode/
