@@ -16,7 +16,7 @@
   <span>English | <a href="./README.zh-CN.md">中文</a></span>
 </p>
 
-### 功能清单
+### name list
 | name  |  document  | description |
 | -------- | --------- |--------- |
 | [demo-hello-world](./demo-hello-world)  |  [yuque](https://www.yuque.com/chuxin-cs/demo/ukkwkpkf817hn3ac)    | Create a project based on Spring Boot, just print "hello world" |
