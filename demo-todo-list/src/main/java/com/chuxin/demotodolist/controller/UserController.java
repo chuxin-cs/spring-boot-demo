@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController {
     // 增加
     @PostMapping("/add")
-    public String add() {
+    private String add() {
         return "add";
     }
 

@@ -1,17 +1,16 @@
 package com.chuxin.democrud.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.chuxin.democrud.entity.User;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/user")
 public class UserController {
     // 增加
-    @PostMapping("/add")
+    @GetMapping("/add")
     public String add() {
-        return "add";
+        String result = "add";
+        return result + "接口";
     }
 
     // 删除
@@ -22,13 +21,23 @@ public class UserController {
 
     // 修改
     @PostMapping("/edit")
-    public String edit() {
-        return "edit";
+    public String edit(@RequestBody User user) {
+        return "add" + user.getUserName()  + user.getPassword();
+    }
+
+    @PostMapping("/edit1")
+    public String edit1(@ModelAttribute User user) {
+        return "add:" + user.getUserName() + user.getId() + user.getPassword();
     }
 
     // 查看
     @GetMapping("/getList")
-    public String getList() {
-        return "getList";
+    public String getList(@RequestParam int page, @RequestParam int pageSize) {
+        return "getList：" + page + " " + pageSize;
+    }
+    // 查看
+    @GetMapping("/getList1/{page}/{pageSize}")
+    public String getList1(@PathVariable String page, @PathVariable String pageSize) {
+        return "getList：" + page + " " + pageSize;
     }
 }
