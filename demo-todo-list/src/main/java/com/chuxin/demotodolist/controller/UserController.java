@@ -1,36 +1,34 @@
 package com.chuxin.demotodolist.controller;
 
-
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.chuxin.demotodolist.entity.User;
+import com.chuxin.demotodolist.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+import java.util.List;
 
 @RestController
 @RequestMapping("/user")
 public class UserController {
+    @Autowired
+    private UserService userService;
     // 增加
     @PostMapping("/add")
-    private String add() {
-        return "add";
+    private Integer add(@RequestBody User user) {
+        return userService.add(user);
     }
-
     // 删除
     @PostMapping("/delete")
-    public String delete() {
-        return "delete";
+    public Integer delete(@RequestBody User user) {
+        return userService.delete(user.getId());
     }
-
     // 修改
     @PostMapping("/edit")
-    public String edit() {
-        return "edit";
+    public Integer edit(@RequestBody User user) {
+        return userService.edit(user);
     }
-
     // 查看
     @GetMapping("/getList")
-    public String getList() {
-        return "getList";
+    public List<User> getList() {
+        return userService.getList();
     }
-
 }
