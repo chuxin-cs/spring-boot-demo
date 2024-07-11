@@ -1,5 +1,6 @@
 package com.chuxin.demotodolist.service;
 
+import com.chuxin.demotodolist.common.result.Result;
 import com.chuxin.demotodolist.entity.User;
 
 import java.util.List;
@@ -16,5 +17,5 @@ public interface UserService {
     Integer edit(User user);
 
     // 查看
-    List<User> getList();
+    Result<List<User>> getList(int page, int pageSize);
 }

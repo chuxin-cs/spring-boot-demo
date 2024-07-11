@@ -1,21 +1,25 @@
 package com.chuxin.demotodolist.service.impl;
 
+import com.chuxin.demotodolist.common.result.Result;
 import com.chuxin.demotodolist.entity.User;
 import com.chuxin.demotodolist.mapper.UserMapper;
 import com.chuxin.demotodolist.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 import java.util.List;
 
 @Service
 public class UserServiceImpl implements UserService {
     @Autowired
     private UserMapper userMapper;
+
     // 增加
     @Override
     public Integer add(User user) {
         return userMapper.add(user);
     }
+
     // 删除
     @Override
     public Integer delete(Integer id) {
@@ -27,14 +31,20 @@ public class UserServiceImpl implements UserService {
 
         return userMapper.delete(id);
     }
+
     // 修改
     @Override
     public Integer edit(User user) {
         return userMapper.edit(user);
     }
+
     // 查看
     @Override
-    public List<User> getList() {
-        return userMapper.getList();
+    public Result<List<User>> getList(int page, int pageSize) {
+        page = (page - 1) * pageSize;
+        // 接收从数据库查询出来的数组
+        List<User> list = userMapper.getList(page, pageSize);
+        // 调用 Result.success 进行包装返回
+        return Result.success(list);
     }
 }

@@ -17,6 +17,6 @@ public interface UserMapper {
     @Update("update sys_user set name=#{name},password=#{password} where id=#{id}")
     Integer edit(User user);
     // 查
-    @Select("select * from sys_user")
-    List<User> getList();
+    @Select("select * from sys_user limit #{page},#{pageSize}")
+    List<User> getList(int page , int pageSize);
 }
