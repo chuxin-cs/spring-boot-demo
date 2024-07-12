@@ -14,6 +14,16 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    // 测试
+    @GetMapping("/failedTest")
+    public Result test() {
+        // return Result.failed();
+        // 这里打印看能取到值么
+        System.out.println(ResultEnum.SUCCESS_CODE);
+        // 传参中使用常量
+        return Result.failed(ResultCode.SUCCESS_CODE, ResultCode.SUCCESS_MSG);
+    }
+
     // 增加
     @PostMapping("/add")
     private Integer add(@RequestBody User user) {
@@ -38,9 +48,5 @@ public class UserController {
         return userService.getList(page, pageSize);
     }
 
-    // 测试
-    @GetMapping("/failedTest")
-    public Result test(){
-        return Result.failed();
-    }
+
 }
