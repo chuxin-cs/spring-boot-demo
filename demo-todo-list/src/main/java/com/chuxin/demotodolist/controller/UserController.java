@@ -37,4 +37,10 @@ public class UserController {
     public Result<List<User>> getList(@RequestParam int page, @RequestParam int pageSize) {
         return userService.getList(page, pageSize);
     }
+
+    // 测试
+    @GetMapping("/failedTest")
+    public Result test(){
+        return Result.failed();
+    }
 }
