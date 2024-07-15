@@ -1,0 +1,4 @@
+# 服务
+server:
+  # spring boot 默认端口 8080
+  port: 8080

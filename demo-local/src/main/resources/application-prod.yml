@@ -1,0 +1,4 @@
+# 服务
+server:
+  # spring boot 默认端口 8080 当前环境是 prod 端口监听8081
+  port: 8081
