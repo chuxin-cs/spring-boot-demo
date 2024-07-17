@@ -1,0 +1,15 @@
+# spring config 配置
+spring:
+  # 当前项目名称
+  application:
+    name: demo-mybatis-plus
+  # 数据库配置
+  datasource:
+    # jdbc
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    # url
+    url: jdbc:mysql://localhost:3306/demo-todo-list?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    # 用户名
+    username: root
+    # 密码
+    password: 123456
