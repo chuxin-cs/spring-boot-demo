@@ -10,7 +10,6 @@ import java.util.List;
 
 @SpringBootTest
 class DemoMybatisPlusApplicationTests {
-
     @Test
     void contextLoads() {
     }
@@ -18,11 +17,11 @@ class DemoMybatisPlusApplicationTests {
     @Autowired
     private UserMapper userMapper;
 
+    // 使用 Mybatis Plus 进行查询
     @Test
     public void getList() {
-        List<User> users = userMapper.getList();
-        for (User user : users) {
-            System.out.println("name: ===> " + user.getName());
-        }
+        System.out.println(("----- selectAll method test ------"));
+        List<User> userList = userMapper.selectList(null);
+        userList.forEach(System.out::println);
     }
 }
