@@ -1,6 +1,7 @@
 server:
   port: 8989
 
+# spring config
 spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
@@ -8,3 +9,42 @@ spring:
     url: jdbc:mysql://119.91.239.178:3306/demo_youlai?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
     username: demo_youlai
     password: 86bmmbLLGnFtiYfb
+
+# security config
+security:
+  jwt:
+    # JWT 秘钥
+    key: SecretKey012345678901234567890123456789012345678901234567890123456789
+    # JWT 有效期(单位：秒)
+    ttl: 7200
+
+
+
+# 验证码配置
+captcha:
+  # 验证码类型 circle-圆圈干扰验证码|gif-Gif验证码|line-干扰线验证码|shear-扭曲干扰验证码
+  type: circle
+  # 验证码宽度
+  width: 120
+  # 验证码高度
+  height: 40
+  # 验证码干扰元素个数
+  interfere-count: 2
+  # 文本透明度(0.0-1.0)
+  text-alpha: 0.8
+  # 验证码字符配置
+  code:
+    # 验证码字符类型 math-算术|random-随机字符
+    type: math
+    # 验证码字符长度，type=算术时，表示运算位数(1:个位数运算 2:十位数运算)；type=随机字符时，表示字符个数
+    length: 1
+  # 验证码字体
+  font:
+    # 字体名称 Dialog|DialogInput|Monospaced|Serif|SansSerif
+    name: SansSerif
+    # 字体样式 0-普通|1-粗体|2-斜体
+    weight: 1
+    # 字体大小
+    size: 24
+  # 验证码有效期(秒)
+  expire-seconds: 120
