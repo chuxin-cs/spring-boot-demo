@@ -1,1 +1,9 @@
-spring.application.name=demo-youlai
+server:
+  port: 8989
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://119.91.239.178:3306/demo_youlai?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    username: demo_youlai
+    password: 86bmmbLLGnFtiYfb

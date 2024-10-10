@@ -1,1 +1,7 @@
-spring.application.name=demo-youlai
+spring:
+  application:
+    name: demo-youlai
+
+  # 指定当前读取那个配置文件 目前是dev 会默认读取  application-dev.yaml 文件
+  profiles:
+    active: dev
