@@ -3,6 +3,7 @@ server:
 
 spring:
   datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://119.91.239.178:3306/demo_youlai?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
     username: demo_youlai
