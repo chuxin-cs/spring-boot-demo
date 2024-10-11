@@ -1,6 +1,7 @@
 package com.chuxin.demoyoulai.controller;
 
 import com.chuxin.demoyoulai.common.result.Result;
+import com.chuxin.demoyoulai.model.dto.CaptchaResult;
 import com.chuxin.demoyoulai.model.dto.LoginResult;
 import com.chuxin.demoyoulai.service.AuthService;
 import io.swagger.v3.oas.annotations.Operation;
@@ -8,10 +9,7 @@ import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @Tag(name = "01.认证中心")
 @RestController
@@ -30,4 +28,13 @@ public class AuthController {
         // 返回登录结果
         return Result.success(loginResult);
     }
+
+
+    @Operation(summary = "获取验证码")
+    @GetMapping("/captcha")
+    public Result<CaptchaResult> getCaptcha() {
+        CaptchaResult captchaResult = authService.getCaptcha();
+        return Result.success(captchaResult);
+    }
+
 }

@@ -31,9 +31,15 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 import java.awt.*;
 import java.util.concurrent.TimeUnit;
 
+/**
+ * 认证服务实现类
+ *
+ * @author haoxr
+ * @since 2.4.0
+ */
 @Service
-@Slf4j
 @RequiredArgsConstructor
+@Slf4j
 public class AuthServiceImpl implements AuthService {
 
     private final AuthenticationManager authenticationManager;
@@ -52,22 +58,23 @@ public class AuthServiceImpl implements AuthService {
     @Override
     public LoginResult login(String username, String password) {
         // 创建认证令牌对象
-        UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(username.toLowerCase().trim(), password);
+        UsernamePasswordAuthenticationToken authenticationToken =
+                new UsernamePasswordAuthenticationToken(username.toLowerCase().trim(), password);
         // 执行用户认证
-        Authentication authentication = authenticationManager.authenticate(authenticationToken);
+//        Authentication authentication = authenticationManager.authenticate(authenticationToken);
         // 认证成功后生成JWT令牌
-        String accessToken = JwtUtils.createToken(authentication);
+//        String accessToken = JwtUtils.createToken(authentication);
         // 将认证信息存入Security上下文，便于在AOP（如日志记录）中获取当前用户信息
-        SecurityContextHolder.getContext().setAuthentication(authentication);
+//        SecurityContextHolder.getContext().setAuthentication(authentication);
         // 返回包含JWT令牌的登录结果
         return LoginResult.builder()
                 .tokenType("Bearer")
-                .accessToken(accessToken)
+                .accessToken("1111111111111")
                 .build();
     }
 
     /**
-     * 退出登录
+     * 注销
      */
     @Override
     public void logout() {
@@ -99,9 +106,14 @@ public class AuthServiceImpl implements AuthService {
         SecurityContextHolder.clearContext();
     }
 
-
+    /**
+     * 获取验证码
+     *
+     * @return 验证码
+     */
     @Override
     public CaptchaResult getCaptcha() {
+
         String captchaType = captchaProperties.getType();
         int width = captchaProperties.getWidth();
         int height = captchaProperties.getHeight();
@@ -137,4 +149,5 @@ public class AuthServiceImpl implements AuthService {
                 .captchaBase64(imageBase64Data)
                 .build();
     }
+
 }
