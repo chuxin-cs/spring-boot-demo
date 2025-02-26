@@ -1,1 +1,7 @@
-spring.application.name=demo-login
+spring:
+  application:
+    name: demo-login
+  # 环境切换
+  profiles:
+    # 当前为 dev 环境， 指向的是 application-dev.yml 文件
+    active: dev
