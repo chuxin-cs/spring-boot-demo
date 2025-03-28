@@ -1,7 +1,4 @@
 package com.chuxin.demologin.shared.auth.service;
-
-import com.chuxin.demologin.shared.auth.model.CaptchaInfo;
-
 /**
  * 认证服务接口
  * @author chuxin
