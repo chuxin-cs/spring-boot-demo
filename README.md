@@ -1,4 +1,4 @@
-# web-demo
+# go-demo
 > 🍉🍉🍉 用来学习并实战 Spring Boot 项目等等~
 
 ## ⌨️ Development
