@@ -1,27 +1,40 @@
-<h1 align="center">
-  <a href="https://github.com/chuxin-cs" target="_blank">Spring Boot Demo</a>
-</h1>
+# web-demo
+> 🍉🍉🍉 用来学习并实战 Spring Boot 项目等等~
 
-<p align="center">
-  <a href="https://www.oracle.com/technetwork/java/javase/downloads/index.html">
-    <img alt="JDK" src="https://img.shields.io/badge/JDK-1.8.0_162-orange.svg"/>
-  </a>
+## ⌨️ Development
+```bash
+git clone https://github.com/chuxin-cs/spring-boot-demo.git
+```
 
-  <a href="https://docs.spring.io/spring-boot/docs/2.1.0.RELEASE/reference/html/">
-    <img alt="Spring Boot" src="https://img.shields.io/badge/Spring Boot-2.1.0.RELEASE-brightgreen.svg"/>
-  </a>
-</p>
+## ✨ 项目列表
+- [demo-crud](https://github.com/chuxin-cs/spring-boot-demo/tree/master/demo-crud) 
+- [demo-env](https://github.com/chuxin-cs/spring-boot-demo/tree/master/demo-env) 
+- [demo-hello-world](https://github.com/chuxin-cs/spring-boot-demo/tree/master/demo-hello-world) 打印 hello world
+- [demo-local](https://github.com/chuxin-cs/spring-boot-demo/tree/master/demo-local) 
+- [demo-login](https://github.com/chuxin-cs/spring-boot-demo/tree/master/demo-login) 
+- [demo-mybatis-plus](https://github.com/chuxin-cs/spring-boot-demo/tree/master/demo-mybatis-plus) 
+- [demo-query-check](https://github.com/chuxin-cs/spring-boot-demo/tree/master/demo-query-check) 
+- [demo-router](https://github.com/chuxin-cs/spring-boot-demo/tree/master/demo-router) 
+- [demo-todo-list](https://github.com/chuxin-cs/spring-boot-demo/tree/master/demo-todo-list) 
+- [demo-youlai](https://github.com/chuxin-cs/spring-boot-demo/tree/master/demo-youlai) 
 
-<p align="center">
-  <span>English | <a href="./README.zh-CN.md">中文</a></span>
-</p>
+## 👨‍💻 个人心得
 
-### name list
-| name  |  document  | description |
-| -------- | --------- |--------- |
-| 第01期：Java 环境安装 |  [语雀](https://www.yuque.com/chuxin-cs/spring-boot-demo/zbk8b6nn1s2ed21g)    | Java 环境安装 |
-| [第02期：创建 SpringBoot 项目](./demo-env)  |  [语雀](https://www.yuque.com/chuxin-cs/spring-boot-demo/dx1zlnxducmrtgih#eENeW)    | 本次 spring boot 项目创建在 idea 编辑器中演示，需使用较新版本 idea |
-| [第03期：打印 hello-world](./demo-hello-world)  |  [语雀](https://www.yuque.com/chuxin-cs/spring-boot-demo/ukkwkpkf817hn3ac)    | 基于 Spring Boot 打印输出 hello world |
-| [第04期：demo-crud 实现增删改查](./demo-crud)  |  [语雀](https://www.yuque.com/chuxin-cs/spring-boot-demo/yyvr5rpniz8r2fcy)    | 基于 Spring Boot 实现增删改查，仅仅只是提供接口不涉及数据库增删改查 |
-| 第05期：Mysql 和 Navicat Premium 安装  |  [语雀](https://www.yuque.com/chuxin-cs/spring-boot-demo/wypgohgrkga0kwpp)    | mysql 和 Navicart Premium 安装 |
-| [第06期：demo-todo-list 实现数据库增删改查](./demo-todo-list)  |  [语雀](https://www.yuque.com/chuxin-cs/spring-boot-demo/qnmrkvh0g89g79l8)    | 基于 Spring Boot 实现增删改查，并且使用mysql数据库来实现 |
+
+
+## Git 贡献提交规范
+
+- 参考 [vue](https://github.com/vuejs/vue/blob/dev/.github/COMMIT_CONVENTION.md) 规范 ([Angular](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-angular))
+
+  - `feat` 增加新功能
+  - `fix` 修复问题/BUG
+  - `style` 代码风格相关无影响运行结果的
+  - `perf` 优化/性能提升
+  - `refactor` 重构
+  - `revert` 撤销修改
+  - `test` 测试相关
+  - `docs` 文档/注释
+  - `chore` 依赖更新/脚手架配置修改等
+  - `ci` 持续集成
+  - `types` 类型定义文件更改
+  - `wip` 开发中
